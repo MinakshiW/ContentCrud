@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}
+        <title>Success</title>
+{% endblock %}
+
+
+{% block content %}
+<div class="w-75 mx_auto">
+    <h1>Do you want to delete <span class="text-danger">{{obj.title}}</span>s data??</h1>
+    <form method="post">
+        {% csrf_token %}
+        <input type="submit" class="btn btn-success col-2" value="Yes">
+        <a href="/a1/sv/"><button type="button"  class="btn btn-warning col-2">No</button></a>
+    </form>
+</div>
+{% endblock %}
